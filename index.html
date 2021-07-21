@@ -13,9 +13,9 @@
             <p>text</p>
             <ul>
                 <li><a href="#">Accueil</a></li>
-                <li><a href="#">Mon parcours</a></li>
-                <li><a href="#">Mes projets</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#parcours">Mon parcours</a></li>
+                <li><a href="#projets">Mes projets</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -44,7 +44,7 @@
             </q>
         </section>
 
-        <section class='parcours'>
+        <section id='parcours' class='parcours'>
             <h2>Mon parcours</h2>
 
             <div class="timeline">
@@ -126,21 +126,46 @@
 
         </section>
 
-        <!--
-            <section>
-            <h1 class='parcours'>Mon parcours</h1>
-        </section>
+        <section class='projets' id='projets'>
+            <h2>Mes projets</h2>
 
-        <section>
-            <h1 class='projets'>Mes projets</h1>
+            <div class='project-description'>
+                <p>Liste des différents projects réalisés durant ma formation sur Openclassrooms</p>
+
+            </div>
+            <ul class="card-wrapper">
+                <li class="card">
+                  <img class='projects' src='https://images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+                  <h3><a href="">Projet 1</a> </h3>
+                  <p>Concevez la maquette du site d'une agence web </p>
+                </li>
+                <li class="card">
+                    <img class='projects' src='https://images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+                    <h3><a href="">Projet 2</a></h3>
+                    <p>Lorem ipsum sit dolor amit</p>
+                  </li>
+                <li class="card">
+                  <img class='projects' src='https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+                  <h3><a href="">Projet 3</a></h3>
+                  <p>Lorem ipsum sit dolor amit</p>
+                </li>
+                <li class="card">
+                  <img class='projects' src='https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+                  <h3><a href="">Projet 4</a></h3>
+                  <p>Lorem ipsum sit dolor amit</p>
+                </li>
+              </ul>
+
         </section>
--->
-    </main>
+   
 
     <footer>
-
+    <section class='contact' id='contact'>
+    <h2>Contact</h2>
+    </section>        
 
     </footer>
+</main>
 
     <script type="text/javascript" src="js/style.js"></script>
 </body>
