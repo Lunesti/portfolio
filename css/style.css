@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* ---- Timeline ----- */
+/* ---- Timeline de mon parcours ----- */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -122,6 +122,7 @@
     border-radius: 4px 4px 0 0;
   }
 }
+/*---- Font face ----*/
 @font-face {
   font-family: "Roboto-Bold";
   src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.ttf") format("truetype");
@@ -164,22 +165,33 @@ h2 {
 
 /* HEADER ----------- */
 header {
-  background: #fff;
   height: 150px;
+  filter: opacity(0.9);
 }
 
 nav {
   position: fixed;
-  background: #FFF;
-  width: 97%;
+  top: 0;
+  z-index: 9999;
+  background: #000;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 150px;
+  overflow: hidden;
+}
+
+nav .cv {
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
 nav ul {
   display: flex;
+  width: 600px;
 }
 
 nav p {
@@ -187,17 +199,78 @@ nav p {
 }
 
 nav li {
+  padding: 0 15px 0 15px;
   padding-left: 15px;
+  color: #fff;
 }
 
 nav a {
-  color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* --------------- */
+nav a:hover {
+  transition-property: color;
+  color: #960096;
+  transition-duration: 500ms;
+}
+
+/* -----Image d'illustration------ */
+.home {
+  background: #000;
+}
+
+.home img {
+  width: 100%;
+  height: auto;
+  filter: opacity(0.2);
+}
+
+.home h2 {
+  border-bottom: 0;
+  margin: 0 0 20px 0;
+}
+
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+  background: #610061;
+}
+
+figure figcaption {
+  position: absolute;
+  width: 900px;
+  z-index: 10;
+  color: white;
+}
+
+hr {
+  width: 60%;
+  margin: 0 auto 50px auto;
+  filter: opacity(0.7);
+}
+
+figcaption p {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  font-style: italic;
+  quotes: "«" "»";
+}
+
+/* ---- Dimensions des blocs ---- */
 main {
   width: 1500px;
   margin: 0 auto 0 auto;
+}
+
+a.parcours:target ~ #parcours {
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 section.profile {
@@ -222,17 +295,17 @@ q {
   font-style: italic;
 }
 
-figure,
-figure img {
+figure#avatar,
+figure .avatar {
   border-radius: 50%;
 }
 
-figure {
+figure#avatar {
   width: 300px;
   height: 300px;
 }
 
-figure img {
+figure .avatar {
   width: 100%;
   height: auto;
 }
@@ -244,12 +317,7 @@ q {
   quotes: "«" "»";
 }
 
-#parcours:target, #projets:target {
-  padding-top: 5vw;
-  margin-top: -5vw;
-}
-
-/*--- projets ---- */
+/*--- cards de mes projets ---- */
 .card {
   --card-gradient: rgba(0, 0, 0, 0.8);
   --card-gradient: #b85454, #2c6ea5;
@@ -310,6 +378,51 @@ q {
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
   grid-gap: 1.5rem;
   width: 100%;
+}
+
+/* --- arrow to top --- */
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

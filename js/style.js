@@ -1,9 +1,13 @@
-
-var background = document.getElementById('background');
-var theCSSprop = window.getComputedStyle(background, null).height;
-var figure = document.getElementById('figure');
-
-if (figure.style.height !== undefined || null) {
-    console.log('La valeur est bien égal à zéro ou n\'existe pas');
-    figure.setAttribute('style', 'height:' + theCSSprop);
-}
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});

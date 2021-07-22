@@ -4,15 +4,16 @@
     <meta charset='utf-8'>
     <title>Titre de la page</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <p>text</p>
+            <p class='cv'>CURICURUM VITAE</p>
             <ul>
-                <li><a href="#">Accueil</a></li>
+                <li><a href="#profil">Accueil</a></li>
                 <li><a href="#parcours">Mon parcours</a></li>
                 <li><a href="#projets">Mes projets</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -20,12 +21,26 @@
         </nav>
     </header>
 
+    <section class='home'>
+        <figure>
+            <img src="img/background.jpg" alt="home accueil">
+            <figcaption>
+                <h2>Arben PEPOSI</h2>
+                <h2>Web developpeur - Intégrateur</h2>
+                <hr>
+                <q> Welcome ! Retrouvez ci-dessous les détails de mon parcours professionnel ainsi que mes projets
+                    réalisés au cours de ma formation. </q>
+            </figcaption>
+        </figure>
+    </section>
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
     <main>
 
-        <section class='profile'>
+        <section id='profil' class='profile'>
             <h2>Profile</h2>
-            <figure>
-                <img src="img/moi.png" alt="avatar">
+            <figure id='avatar'>
+                <img class='avatar' src="img/moi.png" alt="avatar">
             </figure>
             <div class='identity'>
                 <p>Arben PEPOSI</p>
@@ -135,37 +150,45 @@
             </div>
             <ul class="card-wrapper">
                 <li class="card">
-                  <img class='projects' src='https://images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
-                  <h3><a href="">Projet 1</a> </h3>
-                  <p>Concevez la maquette du site d'une agence web </p>
+                    <img class='projects'
+                        src='https://images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400'
+                        alt=''>
+                    <h3><a href="">Projet 1</a> </h3>
+                    <p>Concevez la maquette du site d'une agence web </p>
                 </li>
                 <li class="card">
-                    <img class='projects' src='https://images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
+                    <img class='projects'
+                        src='https://images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400'
+                        alt=''>
                     <h3><a href="">Projet 2</a></h3>
                     <p>Lorem ipsum sit dolor amit</p>
-                  </li>
-                <li class="card">
-                  <img class='projects' src='https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
-                  <h3><a href="">Projet 3</a></h3>
-                  <p>Lorem ipsum sit dolor amit</p>
                 </li>
                 <li class="card">
-                  <img class='projects' src='https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400' alt=''>
-                  <h3><a href="">Projet 4</a></h3>
-                  <p>Lorem ipsum sit dolor amit</p>
+                    <img class='projects'
+                        src='https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400'
+                        alt=''>
+                    <h3><a href="">Projet 3</a></h3>
+                    <p>Lorem ipsum sit dolor amit</p>
                 </li>
-              </ul>
+                <li class="card">
+                    <img class='projects'
+                        src='https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400'
+                        alt=''>
+                    <h3><a href="">Projet 4</a></h3>
+                    <p>Lorem ipsum sit dolor amit</p>
+                </li>
+            </ul>
 
         </section>
-   
 
-    <footer>
-    <section class='contact' id='contact'>
-    <h2>Contact</h2>
-    </section>        
 
-    </footer>
-</main>
+        <footer>
+            <section class='contact' id='contact'>
+                <h2>Contact</h2>
+            </section>
+
+        </footer>
+    </main>
 
     <script type="text/javascript" src="js/style.js"></script>
 </body>
