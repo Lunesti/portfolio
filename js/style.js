@@ -1,20 +1,14 @@
 // ===== Scroll to Top ==== 
 $(window).scroll(function() {
-    let height_ = "100px";
     if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
         $('#return-to-top').fadeIn(200); // Fade in the arrow
-
-        $('nav').animate({
-            height: "100px"
-        });
+        $('.header nav').stop().animate({ height: "50px" }); // ici j'ai mis 50px, c'est bien suffisant
 
     } else {
         $('#return-to-top').fadeOut(200); // Else fade out the arrow
-        height_ = "150px";
+        $('.header nav').stop().animate({ height: "150px" });
 
     }
-    $('.header').stop().animate({ "height": height_ }, 100);
-
     // A $( document ).ready() block.
 
 });
