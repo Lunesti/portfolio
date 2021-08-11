@@ -1,4 +1,44 @@
 @charset "UTF-8";
+/*---- Font face ----*/
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+* {
+  font-family: "Roboto-Light";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+figure {
+  margin: 0;
+}
+
+h2 {
+  padding-bottom: 10px;
+  width: 100%;
+  font-size: 3.5em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
 /* ---- Timeline de mon parcours ----- */
 body {
   font-family: "Effra", Helvetica, sans-serif;
@@ -20,12 +60,8 @@ h6 {
   margin-top: 0;
 }
 
-h3 {
-  text-align: center;
-}
-
 a {
-  color: #FF6B6B;
+  color: #ff6b6b;
 }
 a:hover {
   color: #ff9a9a;
@@ -33,14 +69,14 @@ a:hover {
 }
 
 .example-header {
-  background: #3D4351;
-  color: #FFF;
+  background: #3d4351;
+  color: #fff;
   font-weight: 300;
   padding: 3em 1em;
   text-align: center;
 }
 .example-header h1 {
-  color: #FFF;
+  color: #fff;
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -55,14 +91,14 @@ a:hover {
   padding: 0 0 4em 0;
 }
 .container-fluid .row:nth-child(even) {
-  background: #F1F4F5;
+  background: #f1f4f5;
 }
 
 .example-title {
   text-align: center;
   margin-bottom: 60px;
   padding: 3em 0;
-  border-bottom: 1px solid #E4EAEC;
+  border-bottom: 1px solid #e4eaec;
 }
 .example-title p {
   margin: 0 auto;
@@ -117,7 +153,7 @@ a:hover {
   width: 15px;
 }
 .timeline-marker:before {
-  background: #FF6B6B;
+  background: #ff6b6b;
   border: 3px solid transparent;
   border-radius: 100%;
   content: "";
@@ -133,7 +169,7 @@ a:hover {
 .timeline-marker:after {
   content: "";
   width: 3px;
-  background: #CCD5DB;
+  background: #ccd5db;
   display: block;
   position: absolute;
   top: 24px;
@@ -146,7 +182,7 @@ a:hover {
 
 .timeline-item:not(.period):hover .timeline-marker:before {
   background: transparent;
-  border: 3px solid #FF6B6B;
+  border: 3px solid #ff6b6b;
 }
 
 /*----- TIMELINE CONTENT -----*/
@@ -174,8 +210,8 @@ a:hover {
   top: 0;
   bottom: 30px;
   position: absolute;
-  border-top: 3px solid #CCD5DB;
-  border-bottom: 3px solid #CCD5DB;
+  border-top: 3px solid #ccd5db;
+  border-bottom: 3px solid #ccd5db;
 }
 .period .timeline-marker:after {
   content: "";
@@ -228,7 +264,14 @@ a:hover {
         MOD: TIMELINE CENTERED
     ----------------------------------------------*/
 @media (min-width: 992px) {
-  .timeline-centered, .timeline-centered .timeline-item, .timeline-centered .timeline-info, .timeline-centered .timeline-marker, .timeline-centered .timeline-content {
+  .timeline-centered .timeline-content {
+    padding-left: 30px;
+  }
+  .timeline-centered,
+.timeline-centered .timeline-item,
+.timeline-centered .timeline-info,
+.timeline-centered .timeline-marker,
+.timeline-centered .timeline-content {
     display: block;
     margin: 0;
     padding: 0;
@@ -254,7 +297,6 @@ a:hover {
   .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
     float: right;
     text-align: left;
-    padding-left: 30px;
   }
   .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
     float: right;
@@ -264,7 +306,6 @@ a:hover {
   .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
     float: left;
     text-align: right;
-    padding-right: 30px;
   }
   .timeline-centered > .timeline-item.period .timeline-content {
     float: none;
@@ -290,50 +331,10 @@ a:hover {
     ----------------------------------------------*/
 .marker-outline .timeline-marker:before {
   background: transparent;
-  border-color: #FF6B6B;
+  border-color: #ff6b6b;
 }
 .marker-outline .timeline-item:hover .timeline-marker:before {
-  background: #FF6B6B;
-}
-
-/*---- Font face ----*/
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-Light";
-  src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.ttf") format("truetype");
-}
-* {
-  font-family: "Roboto-Light";
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-p,
-figure {
-  margin: 0;
-}
-
-h2 {
-  padding-bottom: 10px;
-  width: 100%;
-  font-size: 3.5em;
-  letter-spacing: 2px;
-  text-align: center;
+  background: #ff6b6b;
 }
 
 /* HEADER ----------- */
@@ -597,11 +598,6 @@ q {
 
 /*# sourceMappingURL=style.css.map */
 /*----- Contact ----- */
-h1,
-h4 {
-  text-align: center;
-}
-
 h1 {
   font-family: "Poppins", sans-serif, "arial";
   font-weight: 600;
@@ -609,18 +605,14 @@ h1 {
   color: white;
 }
 
-h4 {
-  font-family: "Roboto", sans-serif, "arial";
-  font-weight: 400;
-  font-size: 20px;
-  color: #9b9b9b;
-  line-height: 1.5;
-}
-
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+footer h3 {
+  text-align: center;
 }
 
 .form-group {
@@ -639,27 +631,6 @@ button {
   margin: auto;
 }
 
-@media only screen and (max-width: 768px) {
-  .styled-input {
-    width: 100%;
-  }
-}
-.styled-input label {
-  color: #999;
-  padding: 1.3rem 30px 1rem 30px;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  pointer-events: none;
-}
-
-.styled-input.wide {
-  width: 650px;
-  max-width: 100%;
-}
-
 input,
 textarea {
   padding: 30px;
@@ -675,56 +646,102 @@ textarea:focus {
   outline: 0;
 }
 
-input:focus ~ span,
-textarea:focus ~ span {
-  width: 100%;
-  -webkit-transition: all 0.075s ease;
-  transition: all 0.075s ease;
-}
+@media all and (max-width: 1440px) {
+  main,
+header,
+.home img {
+    width: 1300px;
+  }
 
-textarea {
-  width: 100%;
-  min-height: 15em;
-}
-
-.input-container {
-  width: 650px;
-  max-width: 100%;
-  margin: 20px auto 25px auto;
-}
-
-.submit-btn {
-  padding: 7px 35px;
-  border-radius: 60px;
-  display: inline-block;
-  background-color: #4b8cfb;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-.submit-btn:hover {
-  transform: translateY(1px);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
-}
-
-@media (max-width: 768px) {
-  .submit-btn {
-    width: 100%;
-    float: none;
-    text-align: center;
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content,
+.timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    padding-left: 0;
   }
 }
-input[type=checkbox] + label {
-  color: #ccc;
-  font-style: italic;
-}
+@media all and (max-width: 992px) {
+  .home figure figcaption {
+    width: 600px;
+  }
 
-input[type=checkbox]:checked + label {
-  color: #f00;
-  font-style: normal;
+  h1,
+h2 {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  .home h2 {
+    margin: 0;
+  }
+
+  hr {
+    margin-bottom: 20px;
+  }
+
+  q {
+    font-size: 1em;
+  }
+
+  main,
+header,
+.home img {
+    width: 100%;
+  }
+
+  .parcours,
+.projets,
+.contact {
+    width: 80%;
+    margin: auto;
+  }
+
+  .parcours h2 {
+    margin-bottom: 30px;
+  }
+
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content,
+.timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    padding-left: 30px;
+  }
+
+  .projets .project-description {
+    margin-top: 10vw;
+  }
+
+  .contact {
+    margin-top: 20vw !important;
+  }
+
+  .contact h3 {
+    margin: 30px 30px;
+    font-weight: normal;
+  }
+
+  .form-group label {
+    font-size: 1.5em;
+  }
+
+  .form-group {
+    width: 80%;
+  }
+
+  input,
+textarea {
+    margin-top: 10px;
+  }
+
+  input {
+    padding: 0;
+    height: 50px;
+  }
+
+  textarea {
+    padding: 0;
+  }
+
+  button {
+    width: 50%;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
