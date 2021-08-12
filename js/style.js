@@ -5,13 +5,15 @@ $(window).scroll(function() {
     if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
         $('#return-to-top').fadeIn(200); // Fade in the arrow
         $('nav').stop().animate({ height: "50px" }); // ici j'ai mis 50px, c'est bien suffisant
-        if ($(window).width() <= 768) {
-            $('nav').stop().animate();
-        }
+
 
     } else {
         $('#return-to-top').fadeOut(200); // Else fade out the arrow
         $('nav').stop().animate({ height: "150px" });
+        if ($(window).width() <= 768) {
+            $('nav').stop().animate({ height: "50px" });
+        }
+
     }
 
 });
