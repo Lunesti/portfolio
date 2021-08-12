@@ -1,17 +1,22 @@
 // ===== Scroll to Top ==== 
+
 $(window).scroll(function() {
+
     if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
         $('#return-to-top').fadeIn(200); // Fade in the arrow
-        $('.header nav').stop().animate({ height: "50px" }); // ici j'ai mis 50px, c'est bien suffisant
+        $('nav').stop().animate({ height: "50px" }); // ici j'ai mis 50px, c'est bien suffisant
+        if ($(window).width() <= 768) {
+            $('nav').stop().animate();
+        }
 
     } else {
         $('#return-to-top').fadeOut(200); // Else fade out the arrow
-        $('.header nav').stop().animate({ height: "150px" });
-
+        $('nav').stop().animate({ height: "150px" });
     }
-    // A $( document ).ready() block.
 
 });
+// A $( document ).ready() block.
+
 
 $('#return-to-top').click(function() { // When arrow is clicked
     $('body,html').animate({

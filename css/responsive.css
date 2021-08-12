@@ -1,0 +1,292 @@
+/*Pour un minimum de 768px*/
+@media (min-width: 768px) {
+  nav li {
+    float: left;
+  }
+
+  nav .navigation {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  nav .menu-icon {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+  }
+
+  nav p {
+    padding-top: 0;
+  }
+}
+/* ---- Timeline de mon parcours ----- */
+body {
+  font-family: "Effra", Helvetica, sans-serif;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:hover {
+  color: #ff6b6b;
+}
+
+/*----------------------------------------------
+    MOD: TIMELINE SPLIT
+----------------------------------------------*/
+@media (min-width: 768px) {
+  .timeline-split .timeline, .timeline-centered .timeline {
+    display: table;
+  }
+  .timeline-split .timeline-item, .timeline-centered .timeline-item {
+    display: table-row;
+    padding: 0;
+  }
+  .timeline-split .timeline-info, .timeline-centered .timeline-info,
+.timeline-split .timeline-marker,
+.timeline-centered .timeline-marker,
+.timeline-split .timeline-content,
+.timeline-centered .timeline-content,
+.timeline-split .period .timeline-info {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .timeline-split .timeline-marker, .timeline-centered .timeline-marker {
+    position: relative;
+  }
+  .timeline-split .timeline-content, .timeline-centered .timeline-content {
+    padding-left: 30px;
+  }
+  .timeline-split .timeline-info, .timeline-centered .timeline-info {
+    padding-right: 30px;
+  }
+  .timeline-split .period .timeline-title, .timeline-centered .period .timeline-title {
+    position: relative;
+    left: -45px;
+  }
+}
+
+/*----------------------------------------------
+        MOD: TIMELINE CENTERED
+    ----------------------------------------------*/
+@media (min-width: 992px) {
+  .timeline-centered .timeline-content {
+    padding-left: 30px;
+  }
+  .timeline-centered,
+.timeline-centered .timeline-item,
+.timeline-centered .timeline-info,
+.timeline-centered .timeline-marker,
+.timeline-centered .timeline-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline-centered .timeline-item {
+    padding-bottom: 40px;
+    overflow: hidden;
+  }
+  .timeline-centered .timeline-marker {
+    position: absolute;
+    left: 50%;
+    margin-left: -7.5px;
+  }
+  .timeline-centered .timeline-info,
+.timeline-centered .timeline-content {
+    width: 48%;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-info {
+    float: left;
+    text-align: right;
+    padding-right: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content {
+    float: right;
+    text-align: left;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
+    float: right;
+    text-align: left;
+    padding-left: 30px;
+  }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    float: left;
+    text-align: right;
+  }
+  .timeline-centered > .timeline-item.period .timeline-content {
+    float: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .timeline-centered .timeline-item.period {
+    padding: 50px 0 90px;
+  }
+  .timeline-centered .period .timeline-marker:after {
+    height: 30px;
+    bottom: 0;
+    top: auto;
+  }
+  .timeline-centered .period .timeline-title {
+    left: auto;
+  }
+}
+
+/*----------------------------------------------
+        MOD: MARKER OUTLINE
+    ----------------------------------------------*/
+.marker-outline .timeline-marker:before {
+  background: transparent;
+  border-color: #ff6b6b;
+}
+.marker-outline .timeline-item:hover .timeline-marker:before {
+  background: #ff6b6b;
+}
+
+@media all and (max-width: 1440px) {
+  main,
+nav {
+    width: 80%;
+    margin: auto;
+  }
+
+  main {
+    margin-right: 10% !important;
+  }
+
+  nav {
+    left: 10%;
+  }
+
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content,
+.timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    padding-left: 0;
+  }
+}
+@media all and (max-width: 992px) {
+  .home figure {
+    margin-top: 15vw;
+  }
+
+  .home figure figcaption {
+    width: 600px;
+  }
+
+  h1,
+h2 {
+    margin: 0;
+    font-size: 40px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  q {
+    font-size: 0.9em;
+  }
+
+  .home h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  hr {
+    margin-bottom: 20px;
+  }
+
+  main,
+nav {
+    width: 80%;
+  }
+
+  .parcours,
+.projets,
+.contact {
+    margin: auto;
+  }
+
+  .parcours h2 {
+    margin-bottom: 30px;
+  }
+
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content,
+.timeline-centered > .timeline-item:nth-child(even) .timeline-content {
+    padding-left: 30px;
+  }
+
+  .projets .project-description {
+    margin-top: 10vw;
+  }
+
+  .contact {
+    margin-top: 20vw !important;
+  }
+
+  .contact h3 {
+    margin: 30px 30px;
+    font-weight: normal;
+  }
+
+  .form-group label {
+    font-size: 1.5em;
+  }
+
+  .form-group {
+    width: 80%;
+  }
+
+  input,
+textarea {
+    margin-top: 10px;
+  }
+
+  input {
+    padding: 0;
+    height: 50px;
+  }
+
+  textarea {
+    padding: 0;
+  }
+
+  button {
+    width: 50%;
+    margin: auto;
+  }
+
+  #accueil:target,
+#profil:target,
+#parcours:target,
+#projets:target,
+#contact:target {
+    padding-top: 5vw;
+    margin-top: -5vw;
+  }
+}
+@media all and (max-device-width: 768px) {
+  #return-to-top,
+.icon-chevron-up {
+    display: none !important;
+  }
+
+  .home figure figcaption {
+    width: auto;
+  }
+
+  .home figure figcaption q,
+hr {
+    display: none;
+  }
+
+  .logo {
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

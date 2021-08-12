@@ -1,11 +1,171 @@
+/*---- Font face ----*/
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+
+* {
+    font-family: "Roboto-Light";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p,
+figure {
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+    padding-bottom: 10px;
+    width: 100%;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+/* HEADER ----------- */
+
+nav {
+    background-color: #fff;
+    position: fixed;
+    left: 15%;
+    top: 0;
+    height: 5vw;
+    z-index: 99999;
+    margin: auto;
+    display: block;
+    height: 15vw;
+}
+
+nav p {
+    vertical-align: middle;
+}
+
+
+/*Liens de navigation*/
+
+nav .navigation {
+    line-height: 5vw;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.navigation li a {
+    display: block;
+    padding-left: 2vw;
+    /*padding: 0.8vw 0.8vw;*/
+    text-decoration: none;
+}
+
+
+/*Paramétrage du bouton du menu burger*/
+
+nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding-top: 5vw;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.menu-icon .navicon:before {
+    top: 5px;
+}
+
+.menu-icon .navicon:after {
+    top: -5px;
+}
+
+
+/* menu btn */
+
+nav .menu-btn {
+    display: none;
+}
+
+nav .menu-btn:checked~.navigation {
+    transition: all .5s ease;
+    background: #fff;
+    max-height: 27vw;
+}
+
+nav .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+nav .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+nav .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+
 /* ---- Timeline de mon parcours ----- */
 
-$primary-color: #FF6B6B;
-$primary-color-hover: scale-color($primary-color, $lightness: 32%);
+$primary-color: #ff6b6b;
+$primary-color-hover: scale-color($primary-color,
+$lightness: 32%);
 body {
     font-family: "Effra", Helvetica, sans-serif;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+}
+
+a:hover {
+    color: $primary-color;
 }
 
 p {
@@ -22,42 +182,11 @@ h6 {
     margin-top: 0;
 }
 
-h3 {
-    text-align: center;
-}
-
-a {
-    color: $primary-color;
-    &:hover {
-        color: $primary-color-hover;
-        text-decoration: none;
-    }
-}
-
-.example-header {
-    background: #3D4351;
-    color: #FFF;
-    font-weight: 300;
-    padding: 3em 1em;
-    text-align: center;
-    h1 {
-        color: #FFF;
-        font-weight: 300;
-        margin-bottom: 20px
-    }
-    p {
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: 700;
-    }
-}
-
 .container-fluid {
     .row {
         padding: 0 0 4em 0;
         &:nth-child(even) {
-            background: #F1F4F5;
+            background: #f1f4f5;
         }
     }
 }
@@ -66,7 +195,7 @@ a {
     text-align: center;
     margin-bottom: 60px;
     padding: 3em 0;
-    border-bottom: 1px solid #E4EAEC;
+    border-bottom: 1px solid #e4eaec;
     p {
         margin: 0 auto;
         max-width: 400px;
@@ -115,7 +244,7 @@ a {
 .timeline-info {
     font-weight: 700;
     letter-spacing: 3px;
-    margin: 0 0 .5em 0;
+    margin: 0 0 0.5em 0;
     text-transform: uppercase;
     white-space: nowrap;
 }
@@ -146,7 +275,7 @@ a {
     &:after {
         content: "";
         width: 3px;
-        background: #CCD5DB;
+        background: #ccd5db;
         display: block;
         position: absolute;
         top: 24px;
@@ -192,8 +321,8 @@ a {
             top: 0;
             bottom: 30px;
             position: absolute;
-            border-top: 3px solid #CCD5DB;
-            border-bottom: 3px solid #CCD5DB;
+            border-top: 3px solid #ccd5db;
+            border-bottom: 3px solid #ccd5db;
         }
         &:after {
             content: "";
@@ -207,227 +336,6 @@ a {
     .timeline-title {
         margin: 0;
     }
-}
-
-
-/*----------------------------------------------
-        MOD: TIMELINE SPLIT
-    ----------------------------------------------*/
-
-.timeline-split {
-    @media (min-width: 768px) {
-        .timeline {
-            display: table;
-        }
-        .timeline-item {
-            display: table-row;
-            padding: 0;
-        }
-        .timeline-info,
-        .timeline-marker,
-        .timeline-content,
-        .period .timeline-info {
-            display: table-cell;
-            vertical-align: top;
-        }
-        .timeline-marker {
-            position: relative;
-        }
-        .timeline-content {
-            padding-left: 30px;
-        }
-        .timeline-info {
-            padding-right: 30px;
-        }
-        .period .timeline-title {
-            position: relative;
-            left: -45px;
-        }
-    }
-}
-
-
-/*----------------------------------------------
-        MOD: TIMELINE CENTERED
-    ----------------------------------------------*/
-
-.timeline-centered {
-    @extend .timeline-split;
-    @media (min-width: 992px) {
-        &, .timeline-item, .timeline-info, .timeline-marker, .timeline-content {
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
-        .timeline-item {
-            padding-bottom: 40px;
-            overflow: hidden;
-        }
-        .timeline-marker {
-            position: absolute;
-            left: 50%;
-            margin-left: -7.5px;
-        }
-        .timeline-info,
-        .timeline-content {
-            width: 48%;
-        }
-        >.timeline-item:nth-child(odd) .timeline-info {
-            float: left;
-            text-align: right;
-            padding-right: 30px;
-        }
-        >.timeline-item:nth-child(odd) .timeline-content {
-            float: right;
-            text-align: left;
-            padding-left: 30px;
-        }
-        >.timeline-item:nth-child(even) .timeline-info {
-            float: right;
-            text-align: left;
-            padding-left: 30px;
-        }
-        >.timeline-item:nth-child(even) .timeline-content {
-            float: left;
-            text-align: right;
-            padding-right: 30px;
-        }
-        >.timeline-item.period .timeline-content {
-            float: none;
-            padding: 0;
-            width: 100%;
-            text-align: center;
-        }
-        .timeline-item.period {
-            padding: 50px 0 90px;
-        }
-        .period .timeline-marker:after {
-            height: 30px;
-            bottom: 0;
-            top: auto;
-        }
-        .period .timeline-title {
-            left: auto;
-        }
-    }
-}
-
-
-/*----------------------------------------------
-        MOD: MARKER OUTLINE
-    ----------------------------------------------*/
-
-.marker-outline {
-    .timeline-marker {
-        &:before {
-            background: transparent;
-            border-color: $primary-color;
-        }
-    }
-    .timeline-item:hover .timeline-marker:before {
-        background: $primary-color;
-    }
-}
-
-
-/*---- Font face ----*/
-
-@font-face {
-    font-family: "Roboto-Bold";
-    src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Roboto-Light";
-    src: url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.ttf") format("truetype");
-}
-
-* {
-    font-family: "Roboto-Light";
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-p,
-figure {
-    margin: 0;
-}
-
-h2 {
-    padding-bottom: 10px;
-    width: 100%;
-    font-size: 3.5em;
-    letter-spacing: 2px;
-    text-align: center;
-}
-
-
-/* HEADER ----------- */
-
-header {
-    height: 150px;
-    filter: opacity(0.9);
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%);
-    top: 0;
-    z-index: 999999;
-    width: 100%;
-}
-
-nav {
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 150px;
-    overflow: hidden;
-}
-
-nav .cv {
-    font-weight: bold;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    color: #fff;
-}
-
-nav ul {
-    display: flex;
-    width: auto;
-}
-
-nav p {
-    padding-left: 15px;
-}
-
-nav li {
-    padding: 0 15px 0 15px;
-    padding-left: 15px;
-    color: #fff;
-}
-
-nav a {
-    color: #fff;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-nav a:hover {
-    transition-property: color;
-    color: #cc4e4e;
-    transition-duration: 500ms;
 }
 
 
@@ -454,17 +362,20 @@ nav a:hover {
     margin: 150px auto auto auto;
 }
 
+figure img {
+    width: 100%;
+    height: auto;
+}
+
 .home figure figcaption {
     position: absolute;
     width: 900px;
     z-index: 10;
     color: white;
-}
-
-hr {
-    width: 60%;
-    margin: 0 auto 50px auto;
-    filter: opacity(0.7);
+    top: 50%;
+    /* poussé de la moitié de hauteur du référent */
+    transform: translateY(-50%);
+    /* tiré de la moitié de sa propre hauteur */
 }
 
 figcaption p {
@@ -477,8 +388,8 @@ figcaption p {
 /* ---- Dimensions des blocs ---- */
 
 main,
-header {
-    width: 1600px;
+nav {
+    width: 70%;
     margin: 0 auto 0 auto;
 }
 
@@ -492,7 +403,7 @@ section {
 }
 
 q {
-    font-size: 1.3em;
+    font-size: 1em;
     letter-spacing: 1px;
     font-style: italic;
     quotes: "«" "»";
@@ -652,30 +563,21 @@ q {
 
 /*----- Contact ----- */
 
-h1,
-h4 {
-    text-align: center;
-}
-
 h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
     font-family: "Poppins", sans-serif, "arial";
-    font-weight: 600;
-    font-size: 72px;
     color: white;
-}
-
-h4 {
-    font-family: "Roboto", sans-serif, "arial";
-    font-weight: 400;
-    font-size: 20px;
-    color: #9b9b9b;
-    line-height: 1.5;
 }
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+footer h3 {
+    text-align: center;
 }
 
 .form-group {
@@ -694,28 +596,6 @@ button {
     margin: auto;
 }
 
-@media only screen and (max-width: 768px) {
-    .styled-input {
-        width: 100%;
-    }
-}
-
-.styled-input label {
-    color: #999;
-    padding: 1.3rem 30px 1rem 30px;
-    position: absolute;
-    top: 10px;
-    left: 0;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-    pointer-events: none;
-}
-
-.styled-input.wide {
-    width: 650px;
-    max-width: 100%;
-}
-
 input,
 textarea {
     padding: 30px;
@@ -729,57 +609,4 @@ textarea {
 input:focus,
 textarea:focus {
     outline: 0;
-}
-
-input:focus~span,
-textarea:focus~span {
-    width: 100%;
-    -webkit-transition: all 0.075s ease;
-    transition: all 0.075s ease;
-}
-
-textarea {
-    width: 100%;
-    min-height: 15em;
-}
-
-.input-container {
-    width: 650px;
-    max-width: 100%;
-    margin: 20px auto 25px auto;
-}
-
-.submit-btn {
-    padding: 7px 35px;
-    border-radius: 60px;
-    display: inline-block;
-    background-color: #4b8cfb;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-
-.submit-btn:hover {
-    transform: translateY(1px);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
-}
-
-@media (max-width: 768px) {
-    .submit-btn {
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
-}
-
-input[type="checkbox"]+label {
-    color: #ccc;
-    font-style: italic;
-}
-
-input[type="checkbox"]:checked+label {
-    color: #f00;
-    font-style: normal;
 }
