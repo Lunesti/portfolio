@@ -202,19 +202,19 @@
         nav {
             width: 80%;
         }
-        .parcours,
-        .projets,
+        .career,
+        .project,
         .contact {
             margin: auto;
         }
-        .parcours h2 {
+        .career h2 {
             margin-bottom: 30px;
         }
         .timeline-centered>.timeline-item:nth-child(odd) .timeline-content,
         .timeline-centered>.timeline-item:nth-child(even) .timeline-content {
             padding-left: 30px;
         }
-        .projets .project-description {
+        .project .project-heading {
             margin-top: 10vw;
         }
         .contact {
@@ -245,10 +245,10 @@
             width: 50%;
             margin: auto;
         }
-        #accueil:target,
+        #home:target,
         #profil:target,
-        #parcours:target,
-        #projets:target,
+        #career:target,
+        #project:target,
         #contact:target {
             padding-top: 5vw;
             margin-top: -5vw;

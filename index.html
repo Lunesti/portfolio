@@ -20,18 +20,18 @@
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="navigation">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#parcours">Services</a></li>
-                <li><a href="#projets">Portfolio</a></li>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#career">Services</a></li>
+                <li><a href="#project">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id='accueil' class='home'>
+        <section id='home' class='home'>
             <figure>
-                <img src="img/cafe.png" alt="home accueil">
+                <img src="img/cafe.png" alt="bannière">
                 <figcaption>
                     <h1>Arben PEPOSI</h1>
                     <h2>Intégrateur - Frontend</h2>
@@ -46,7 +46,7 @@
         <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
 
 
-        <section id='parcours' class='parcours'>
+        <section id='career' class='career'>
             <h2>Mon parcours</h2>
 
             <div class="container-fluid">
@@ -126,17 +126,17 @@
 
 
 
-        <section class='projets' id='projets'>
+        <section class='project' id='project'>
             <h2>Mes projets</h2>
 
-            <div class='project-description'>
+            <div class='project-heading'>
                 <p>Liste des différents projects réalisés durant ma formation sur Openclassrooms, ainsi que d'autres</p>
 
             </div>
             <ul class="card-wrapper">
                 <li class="card">
                     <div class='card-overlay'>
-                        <img class='projects' src='img/ordi.jpg' alt=''>
+                        <img class='projects' src='img/ordi.jpg' alt='Openclassrooms projet Web agency'>
                         <div class="overlay">
                             <div class="text">Techs utilisés: <br><br> HTML5, CSS3</div>
                         </div>
@@ -146,7 +146,7 @@
                 </li>
                 <li class="card">
                     <div class='card-overlay'>
-                        <img class='projects' src='img/ireki.jpg' alt=''>
+                        <img class='projects' src='img/ireki.jpg' alt='Openclassrooms Wordpress Ireki'>
                         <div class="overlay">
                             <div class="text">Techs utilisés: <br><br> Wordpress</div>
                         </div>
@@ -158,7 +158,7 @@
                 </li>
                 <li class="card">
                     <div class='card-overlay'>
-                        <img class='projects' src='img/velo.jpg' alt=''>
+                        <img class='projects' src='img/velo.jpg' alt='Openclassrooms projet vélos'>
                         <div class="overlay">
                             <div class="text">Techs utilisés: <br><br> HTML5, CSS3, Javascript natif, JSON</div>
                         </div>
@@ -170,7 +170,7 @@
                 </li>
                 <li class="card">
                     <div class='card-overlay'>
-                        <img class='projects' src='img/blog.jpg' alt=''>
+                        <img class='projects' src='img/blog.jpg' alt='Openclassrooms blog écrivain'>
                         <div class="overlay">
                             <div class="text">Techs utilisés: <br><br> HTML5, CSS3, Javascript, <br> PHP & MySQL</div>
                         </div>
@@ -182,7 +182,7 @@
                 </li>
                 <li class="card">
                     <div class='card-overlay'>
-                        <img class='projects' src='img/tokyo.jpg' alt=''>
+                        <img class='projects' src='img/tokyo.jpg' alt='Openclassrooms projet tokyo'>
                         <div class="overlay">
                             <div class="text">Techs utilisés: <br><br> HTML5, CSS3, Javascript, JSON, <br>PHP & MySQL
                             </div>
@@ -197,7 +197,7 @@
 
                 <li class="card">
                     <div class='card-overlay'>
-                        <img class='projects' src='img/kaisha.jpg' alt=''>
+                        <img class='projects' src='img/kaisha.jpg' alt='Frontendmentor projet'>
                         <div class="overlay">
                             <div class="text">Techs utilisés: <br><br> HTML5, CSS3</div>
                         </div>
@@ -226,16 +226,16 @@
                 <form class="form" action="index.php?action=addLocation" method="post">
 
                     <div class="form-group">
-                        <label for="name">Nom : </label><input type="text" class="form-control input-size" name="url" required="">
+                        <label for="username">Nom : </label><input type="text" class="form-control input-size" name="username" required>
                     </div>
                     <div class="form-group">
-                        <label for="name">Prénom</label> : <input type="text" class="form-control input-size" name="name" required="">
+                        <label for="lastname">Prénom</label> : <input type="text" class="form-control input-size" name="lastname" required>
                     </div>
                     <div class="form-group">
-                        <label for="text">Société : (facultatif)</label> <input type="text" class="form-control input-size" name="latitude" minlength="8">
+                        <label for="text">Société : (facultatif)</label> <input type="text" class="form-control input-size">
                     </div>
                     <div class="form-group">
-                        <label for="commentaire">Votre message : </label> <textarea name="commentaire" class="form-control" id="" cols="30" rows="10"></textarea>
+                        <label for="comment">Votre message : </label> <textarea name="comment" class="form-control" id="" cols="30" rows="10"></textarea>
                     </div>
                     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 

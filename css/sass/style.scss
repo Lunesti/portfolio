@@ -393,7 +393,7 @@ nav {
     margin: 0 auto 0 auto;
 }
 
-a.parcours:target~#parcours {
+a.career:target~#career {
     -webkit-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
 }
@@ -468,7 +468,7 @@ q {
     text-align: center;
 }
 
-.projets .project-description {
+.project .project-heading {
     text-align: center;
     margin: 40px 0 40px 0;
 }
@@ -548,10 +548,10 @@ q {
     top: 5px;
 }
 
-#accueil:target,
+#home:target,
 #profil:target,
-#parcours:target,
-#projets:target,
+#career:target,
+#project:target,
 #contact:target {
     padding-top: 5vw;
     margin-top: -5vw;
